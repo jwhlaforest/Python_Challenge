@@ -42,3 +42,14 @@ for person, vote_count in cand_votes.items():
 print('-------------------------')
 print('Winner:',winner)
 print('-------------------------')
+
+with open('PyPoll.txt','w') as f:
+    print('Election Results', file = f)
+    print('-------------------------', file = f)
+    print('Total Votes:',votes, file = f)
+    print('-------------------------', file = f)
+    for person, vote_count in cand_votes.items():
+        print(person,':',cand_perc[person],'(',vote_count,')', file = f)
+    print('-------------------------', file = f)
+    print('Winner:',winner, file = f)
+    print('-------------------------', file = f)

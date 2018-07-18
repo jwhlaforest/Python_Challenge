@@ -52,3 +52,12 @@ print('Total: $',total_net)
 print('Average Change: $',average_change)
 print('Greatest Increase in Profits:',inc_date,'($',inc_diff,')')
 print('Greatest Decrease in Profits:',dec_date,'($',dec_diff,')')
+
+with open('PyBank.txt','w') as f:
+    print('Financial Analysis', file = f)
+    print('----------------------------', file = f)
+    print('Total Months:',total_months, file = f)
+    print('Total: $',total_net, file = f)
+    print('Average Change: $',average_change, file = f)
+    print('Greatest Increase in Profits:',inc_date,'($',inc_diff,')', file = f)
+    print('Greatest Decrease in Profits:',dec_date,'($',dec_diff,')', file = f)
